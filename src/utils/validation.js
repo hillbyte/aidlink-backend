@@ -9,7 +9,7 @@ export const donationSchema = z.object({
 
   // donation_type: z.string().min(1, "Donation type is required"),
   items_description: z.string().min(5, "Please provide a description"),
-  quantity: z.number().int().positive().optional(),
+  quantity: z.string().min(1, "Quantity is required"),
   condition: z.enum(["new", "like_new", "good", "fair", "poor"]),
   pickup_required: z.boolean().default(false),
   pickup_address: z.string().optional(),

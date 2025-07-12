@@ -10,7 +10,7 @@ import { errorHandler } from "./utils/errorHandler.js";
 const app = new Hono();
 
 // Middleware
-app.use("*", logger());
+// app.use("*", logger());
 app.use("*", cors());
 
 app.get("/", (c) =>
